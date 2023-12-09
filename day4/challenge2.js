@@ -3,6 +3,8 @@ import fs from "fs/promises";
 const input = await fs.readFile("./input.txt", "utf8");
 const lines = input.split("\n");
 
+console.time("algo");
+
 function formatLines(arr) {
   const formattedLines = [];
   for (const line of arr) {
@@ -56,3 +58,4 @@ function findHowManyScratchCards(arr) {
 }
 
 console.log(findHowManyScratchCards(lines));
+console.timeEnd("algo");
